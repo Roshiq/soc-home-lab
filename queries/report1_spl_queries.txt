@@ -1,0 +1,13 @@
+SPL Queries — Brute Force Investigation
+
+Query 1 — Find all failed logins
+source="test.log" LOGIN_FAILED
+
+Query 2 — Count failed logins by IP
+source="test.log" LOGIN_FAILED | stats count by src_ip
+
+Query 3 — Full picture of all users and IPs
+source="test.log" | stats count by user, src_ip
+
+Query 4 — Successful logins only
+source="test.log" LOGIN_SUCCESS | stats count by user, src_ip
