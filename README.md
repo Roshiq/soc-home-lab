@@ -10,7 +10,8 @@ practical SOC analyst skills.
 
 ## Investigations Completed
 | # | Title | Type | Date |
-| 001 | Brute Force & Compromised Credential Analysis | Log Analysis | 17-08-26 |
+| 001 | Brute Force & Compromised Credential Analysis | Log Analysis | 06-09-26 |
+| 002 | Multi-Attack Chain Analysis | Brute Force, Exfiltration, Lateral Movement, Insider Threat, After-Hours Access | 07-09-2026 |
 
 ## Skills Demonstrated
 - SPL query writing
