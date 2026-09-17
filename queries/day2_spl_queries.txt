@@ -1,0 +1,19 @@
+# Day 2 SPL Queries — Multi-Attack Investigation
+
+# Query 1 — Full picture of all users and events
+source="attack_simulation.log" | stats count by user, src_ip
+
+# Query 2 — Sarah's activity
+source="attack_simulation.log" user=sarah
+
+# Query 3 — Mike's activity
+source="attack_simulation.log" user=mike
+
+# Query 4 — Port scan detection
+source="attack_simulation.log" PORT_SCAN
+
+# Query 5 — Data exfiltration detection
+source="attack_simulation.log" DATA_TRANSFER | stats sum(bytes) by user, dst_ip
+
+# Query 6 — Full admin attack timeline
+source="attack_simulation.log" src_ip=203.45.67.89 | sort _time
